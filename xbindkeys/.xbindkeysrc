@@ -1,0 +1,20 @@
+
+"/usr/bin/amixer -q set Capture toggle"
+    m:0x0 + c:198
+    XF86AudioMicMute
+
+"/usr/bin/amixer -q set Master 2+"
+    m:0x0 + c:123
+    XF86AudioRaiseVolume
+
+"/usr/bin/amixer -q set Master 2-"
+    m:0x0 + c:122
+    XF86AudioLowerVolume
+
+"/usr/bin/amixer -q set Master toggle"
+    m:0x0 + c:121
+    XF86AudioMute
+
+"/usr/bin/shotgun"
+    m:0x0 + c:107
+    Print
