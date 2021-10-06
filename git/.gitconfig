@@ -1,3 +1,9 @@
 [user]
-	email = daniel.malugo@gmail.com
+	email = daniel.mal@protonmail.com
 	name = daniel
+
+[alias]
+	st = status
+
+[core]
+	editor = vim
