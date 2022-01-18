@@ -12,7 +12,7 @@ endif
 
 " pluggins
 call plug#begin('~/.vim/plugged')
-Plug 'valloric/youcompleteme'
+Plug 'ycm-core/YouCompleteMe'
 Plug 'jpalardy/vim-slime'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'scrooloose/nerdtree'
