@@ -18,6 +18,7 @@ Plug 'JuliaEditorSupport/julia-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
 Plug 'mhartington/oceanic-next'
+Plug 'fladson/vim-kitty'
 call plug#end()
 
 " relative numbers
@@ -66,3 +67,6 @@ set noshowmode
 
 " config vim slime for kitty
 let g:slime_target = "kitty"
+
+" vim slime for ipython
+let g:slime_python_ipython = 1
