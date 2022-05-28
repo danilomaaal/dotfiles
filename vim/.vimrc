@@ -13,6 +13,7 @@ endif
 " pluggins
 call plug#begin('~/.vim/plugged')
 Plug 'ycm-core/YouCompleteMe'
+Plug 'SirVer/ultisnips'
 Plug 'jpalardy/vim-slime'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'scrooloose/nerdtree'
@@ -66,7 +67,12 @@ let g:lightline = {
 set noshowmode
 
 " config vim slime for kitty
-let g:slime_target = "kitty"
+let g:slime_target = 'kitty'
 
 " vim slime for ipython
 let g:slime_python_ipython = 1
+
+" config UltiSnips keys
+let g:UltiSnipsExpandTrigger='<Right>'
+let g:UltiSnipsListSnippets='<C-S-Tab>'
+let g:UltiSnipsEditSplit='vertical'

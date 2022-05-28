@@ -12,9 +12,11 @@ compinit
 kitty + complete setup zsh | source /dev/stdin
 
 # aliases
-alias icat='kitty +kitten icat'
-alias kwid='$KITTY_WINDOW_ID'
-alias cls='clear'
+alias icat="kitty +kitten icat"
+alias print-kwid="printf $KITTY_WINDOW_ID"
+alias cls="clear"
+alias update-omz="omz update"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -113,9 +115,12 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# aliases
+alias icat="kitty +kitten icat"
+alias print-kwid="printf $KITTY_WINDOW_ID"
+alias cls="clear"
+alias oh-mz-update="omz update"
+alias oh-mz-conf="vim ~/.zshrc"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
