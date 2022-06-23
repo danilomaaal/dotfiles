@@ -15,6 +15,6 @@
     m:0x0 + c:121
     XF86AudioMute
 
-"/usr/bin/shotgun"
+"/usr/bin/shotgun $HOME/Images/screenshot_$(date +%Y-%M-%d-%H%S).png"
     m:0x0 + c:107
     Print

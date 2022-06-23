@@ -5,8 +5,10 @@ automake
 base
 binutils
 bison
-brave-bin
+chromium
 cmake
+cowsay
+dunst
 fakeroot
 feh
 file
@@ -23,10 +25,12 @@ grep
 groff
 grub
 gzip
+hugo
 imagemagick
 jq
 julia
 kitty
+libreoffice-still
 libtool
 libxft
 libxinerama
@@ -43,6 +47,7 @@ nerd-fonts-complete
 networkmanager
 noto-fonts-emoji
 npm
+openssh
 pacman
 pandoc
 pass
@@ -53,6 +58,7 @@ powerline-fonts
 python-pip
 r
 ranger
+rust
 sc-im
 sed
 shellcheck
@@ -61,12 +67,14 @@ spotify-tui
 spotifyd
 stow
 sudo
+telegram-desktop
 texinfo
 tk
 tmux
 tree
 ttf-font-awesome
 ttf-inconsolata
+udunits
 unzip
 vi
 vim

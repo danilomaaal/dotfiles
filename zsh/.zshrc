@@ -8,14 +8,8 @@ fi
 autoload -Uz compinit
 compinit
 
-# completion for kitty
+# Enable completion for kitty
 kitty + complete setup zsh | source /dev/stdin
-
-# aliases
-alias icat="kitty +kitten icat"
-alias print-kwid="printf $KITTY_WINDOW_ID"
-alias cls="clear"
-alias update-omz="omz update"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -43,13 +37,13 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
 # DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=15
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -61,7 +55,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
@@ -108,7 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # fi
 
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+export ARCHFLAGS="-arch x86_64"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -119,8 +113,13 @@ source $ZSH/oh-my-zsh.sh
 alias icat="kitty +kitten icat"
 alias print-kwid="printf $KITTY_WINDOW_ID"
 alias cls="clear"
-alias oh-mz-update="omz update"
-alias oh-mz-conf="vim ~/.zshrc"
+alias ohmz-update="omz update"
+alias ohmz-conf="vim ~/.zshrc"
+# list pakages
+alias make-pkglist="pacman -Qqe > ~/.dotfiles/packages.txt"
+# reinstall commands (arch packages and aur)
+alias reinstall-yay="yay -S --needed $(comm -12 <(yay -Slq | sort) <(sort ~/.dotfiles/packages.txt))"
+alias reinstall-pacman="pacman -S --needed $(comm -12 <(pacman -Slq | sort) <(sort ~/.dotfiles/packages.txt))"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
