@@ -1,3 +1,4 @@
+pfetch
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -95,11 +96,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='vim'
+fi
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
@@ -120,6 +121,11 @@ alias make-pkglist="pacman -Qqe > ~/.dotfiles/packages.txt"
 # reinstall commands (arch packages and aur)
 alias reinstall-yay="yay -S --needed $(comm -12 <(yay -Slq | sort) <(sort ~/.dotfiles/packages.txt))"
 alias reinstall-pacman="pacman -S --needed $(comm -12 <(pacman -Slq | sort) <(sort ~/.dotfiles/packages.txt))"
+# update pacman's latest keys
+alias get-pacman-keys="pacman-key --refresh-keys"
+
+#pfetch config
+#export PF_INFO="ascii title os host kernel uptime pkgs shell wm memory palette"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
