@@ -18,3 +18,7 @@
 "/usr/bin/shotgun $HOME/Images/screenshot_$(date +%Y-%M-%d-%H%S).png"
     m:0x0 + c:107
     Print
+
+ "/usr/bin/shutdown now"
+    m:0xc + c:119
+    Control+Alt + Delete
