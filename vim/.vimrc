@@ -18,7 +18,7 @@ Plug 'jpalardy/vim-slime'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
-Plug 'arcticicestudio/nord-vim'
+Plug 'Rigellute/shades-of-purple.vim'
 Plug 'fladson/vim-kitty'
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
@@ -49,7 +49,7 @@ let g:slime_target = 'kitty'
 let g:slime_python_ipython = 1
 
 """ enable theme 
-colorscheme nord
+colorscheme shades_of_purple
 
 if (has("termguicolors"))
  set termguicolors
@@ -69,9 +69,10 @@ if !has('gui_running')
   set t_Co=256
 endif
 
-"
+let g:shades_of_purple_lightline = 1
+
 let g:lightline = {
-      \ 'colorscheme': 'nord'
+      \ 'colorscheme': 'shades_of_purple'
       \ }
 
 " remove the --INSERT--
