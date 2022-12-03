@@ -6,6 +6,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+POWERLEVEL9K_INSTANT_PROMPT=quiet
+
 autoload -Uz compinit
 compinit
 
@@ -109,13 +111,14 @@ export ARCHFLAGS="-arch x86_64"
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
 # aliases
 alias icat="kitty +kitten icat"
 alias print-kwid="printf $KITTY_WINDOW_ID"
 alias cls="clear"
 alias ohmz-update="omz update"
 alias ohmz-conf="vim ~/.zshrc"
+alias delete-meta="exiftool -all="
+alias linearize-pdf="qpdf --linearize"
 # list pakages
 alias make-pkglist="pacman -Qqe > ~/.dotfiles/packages.txt"
 # reinstall commands (arch packages and aur)
