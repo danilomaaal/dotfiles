@@ -47,5 +47,7 @@ exec xrdb &
 picom &
 # custom key bindings 
 xbindkeys &
+# redshift
+redshift &
 # and window manager
 dwm
