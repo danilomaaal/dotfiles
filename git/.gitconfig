@@ -4,6 +4,12 @@
 
 [alias]
 	st = status
+	a = add
+	co = commit -m
+	prty = log --pretty=oneline --graph --decorate --all
 
 [core]
 	editor = vim
+
+[help]
+	autocorrect = 1
