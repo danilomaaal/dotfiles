@@ -21,6 +21,8 @@ Plug 'itchyny/lightline.vim'
 Plug 'Rigellute/shades-of-purple.vim'
 Plug 'fladson/vim-kitty'
 Plug 'ryanoasis/vim-devicons'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 call plug#end()
 
 """ basic configs
@@ -61,6 +63,7 @@ hi Normal guibg=NONE ctermbg=NONE
 hi LineNr guibg=NONE ctermbg=NONE
 hi SignColumn guibg=NONE ctermbg=NONE
 hi EndOfBuffer guibg=NONE ctermbg=NONE
+hi Pmenu ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 
 """ config status line (lightline) 
 set laststatus=2
@@ -78,12 +81,43 @@ let g:lightline = {
 " remove the --INSERT--
 set noshowmode
 
+""" goyo and limelight stuff
+" limelight
+let g:limelight_conceal_ctermfg = 100
+let g:limelight_conceal_guifg= '#83a598'
+
+" goyo
+function! s:goyo_enter()
+  set noshowmode
+  set noshowcmd
+  set scrolloff=999
+  Limelight
+  " ...
+endfunction
+
+function! s:goyo_leave()
+  set showmode
+  set showcmd
+  set scrolloff=5
+  Limelight!
+  hi Normal guibg=NONE ctermbg=NONE
+  hi LineNr guibg=NONE ctermbg=NONE
+  hi SignColumn guibg=NONE ctermbg=NONE
+  hi EndOfBuffer guibg=NONE ctermbg=NONE
+  "...
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
+
 """ config UltiSnips keys
 let g:UltiSnipsExpandTrigger='<Right>'
 let g:UltiSnipsListSnippets='<C-S-Tab>'
 let g:UltiSnipsEditSplit='vertical'
 
 """ remapings
+nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-J> <C-W>J
 nnoremap <C-K> <C-W>K
 nnoremap <C-L> <C-W>L
