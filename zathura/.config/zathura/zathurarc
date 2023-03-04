@@ -42,5 +42,10 @@ map R rotate
 map K zoom in
 map J zoom out
 map i recolor
-set recolor                     true
 map p print
+
+set recolor                     true
+
+set default-bg rgba(0,0,0,0.7)
+set recolor-lightcolor rgba(0,0,0,0)
+set adjust-open width
