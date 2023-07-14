@@ -6,7 +6,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 autoload -Uz compinit
 compinit
@@ -119,6 +118,7 @@ alias ohmz-update="omz update"
 alias ohmz-conf="vim ~/.zshrc"
 alias delete-meta="exiftool -all="
 alias linearize-pdf="qpdf --linearize"
+alias scan-du="ncdu"
 # list pakages
 alias make-pkglist="pacman -Qqe > ~/.dotfiles/packages.txt"
 # reinstall commands (arch packages and aur)
