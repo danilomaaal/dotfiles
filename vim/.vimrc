@@ -23,6 +23,7 @@ Plug 'fladson/vim-kitty'
 Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
+Plug 'vim-pandoc/vim-markdownfootnotes'
 call plug#end()
 
 """ basic configs
@@ -117,8 +118,9 @@ let g:UltiSnipsListSnippets='<C-S-Tab>'
 let g:UltiSnipsEditSplit='vertical'
 
 """ remapings
+let mapleader = ","
 nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-J> <C-W>J
-nnoremap <C-K> <C-W>K
-nnoremap <C-L> <C-W>L
-nnoremap <C-H> <C-W>H
+nnoremap <M-j> <C-w>j
+nnoremap <M-k> <C-w>k
+nnoremap <M-l> <C-w>l
+nnoremap <M-h> <C-w>h
