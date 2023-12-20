@@ -124,6 +124,9 @@ alias make-pkglist="pacman -Qqe > ~/.dotfiles/packages.txt"
 # reinstall commands (arch packages and aur)
 alias reinstall-yay="yay -S --needed $(comm -12 <(yay -Slq | sort) <(sort ~/.dotfiles/packages.txt))"
 alias reinstall-pacman="pacman -S --needed $(comm -12 <(pacman -Slq | sort) <(sort ~/.dotfiles/packages.txt))"
+# clean package manager cache
+alias pkg-clean="paccache -rk2"
+
 # update pacman's latest keys
 alias get-pacman-keys="pacman-key --refresh-keys"
 
