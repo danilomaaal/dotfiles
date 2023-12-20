@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-max "${HOME}/Images/aurora.png" 
+feh --no-fehbg --bg-max "${HOME}/Images/wallpapers/aurora.png" 
