@@ -3,6 +3,7 @@ alsa-utils
 autoconf
 automake
 base
+bat
 bettercap
 binutils
 bison
