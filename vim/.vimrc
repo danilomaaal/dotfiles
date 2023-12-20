@@ -18,7 +18,7 @@ Plug 'jpalardy/vim-slime'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
-Plug 'Rigellute/shades-of-purple.vim'
+Plug 'rose-pine/vim'
 Plug 'fladson/vim-kitty'
 Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/goyo.vim'
@@ -52,12 +52,11 @@ let g:slime_target = 'kitty'
 let g:slime_python_ipython = 1
 
 """ enable theme 
-colorscheme shades_of_purple
+colorscheme rosepine_moon
 
 if (has("termguicolors"))
  set termguicolors
 endif
-
 
 " set tranparency
 hi Normal guibg=NONE ctermbg=NONE
@@ -73,10 +72,8 @@ if !has('gui_running')
   set t_Co=256
 endif
 
-let g:shades_of_purple_lightline = 1
-
 let g:lightline = {
-      \ 'colorscheme': 'shades_of_purple'
+      \ 'colorscheme': 'rosepine_moon'
       \ }
 
 " remove the --INSERT--
