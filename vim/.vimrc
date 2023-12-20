@@ -21,6 +21,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'rose-pine/vim'
 Plug 'fladson/vim-kitty'
 Plug 'ryanoasis/vim-devicons'
+Plug 'zah/nim.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'vim-pandoc/vim-markdownfootnotes'
@@ -107,7 +108,20 @@ endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
+"
+au BufNewFile,BufRead *.nim set filetype=nim
 
+fun! JumpToDef()
+  if exists("*GotoDefinition_" . &filetype)
+    call GotoDefinition_{&filetype}()
+  else
+    exe "norm! \<C-]>"
+  endif
+endf
+
+" Jump to tag
+nn <M-g> :call JumpToDef()<cr>
+ino <M-g> <esc>:call JumpToDef()<cr>i
 
 """ config UltiSnips keys
 let g:UltiSnipsExpandTrigger='<Right>'
