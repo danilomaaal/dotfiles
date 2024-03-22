@@ -130,7 +130,7 @@ let g:UltiSnipsEditSplit='vertical'
 
 """ remapings
 let mapleader = ","
-nnoremap <C-n> :NERDTree<CR>
+nnoremap <M-n> :NERDTree<CR>
 nnoremap <M-j> <C-w>j
 nnoremap <M-k> <C-w>k
 nnoremap <M-l> <C-w>l
