@@ -13,3 +13,5 @@
 
 [help]
 	autocorrect = 1
+[credential]
+	helper = cache
