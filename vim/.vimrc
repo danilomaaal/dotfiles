@@ -79,11 +79,29 @@ let g:lightline = {
 
 " remove the --INSERT--
 set noshowmode
+set shell=/usr/bin/zsh
+
+"" youcompleteme additional servers
+let g:ycm_language_server = [
+      \ {
+      \   'name': 'r',
+      \   'filetypes': ['r'],
+      \   'cmdline': ['/usr/bin/R', '--slave', '-e', 'languageserver::run()'],
+      \   'project_root_files': ['renv.lock']
+      \ },
+      \ {
+      \   'name': 'rust',
+      \   'cmdline': [ 'ra_lsp_server' ],
+      \   'filetypes': [ 'rust' ],
+      \   'project_root_files': [ 'Cargo.toml' ]
+      \ }
+   \ ]
+
 
 """ goyo and limelight stuff
 " limelight
-let g:limelight_conceal_ctermfg = 100
-let g:limelight_conceal_guifg= '#83a598'
+let g:limelight_conceal_ctermfg=100
+let g:limelight_conceal_guifg='#83a598'
 
 " goyo
 function! s:goyo_enter()
